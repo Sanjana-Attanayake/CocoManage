@@ -4,4 +4,4 @@ __pycache__
 *.jpg
 *.png
 .cache.sqlite
-firebase_admin_credentials.json
+admin-cred.json

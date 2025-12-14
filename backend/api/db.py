@@ -25,6 +25,6 @@ def init_firebase():
 def init_firebase_admin():
     load_dotenv()
 
-    cred = credentials.Certificate(os.getenv("FIREBASE_ADMIN_KEY_PATH"))
+    cred = credentials.Certificate("./admin-cred.json")
     firebase_admin.initialize_app(cred)
     return firebase_admin

@@ -68,7 +68,7 @@ class Attendance():
 
 
     # Function to verify the employee
-    def verify_employee(self, uploaded_file_path):
+    # def verify_employee(self, uploaded_file_path):
         file_paths = [
             os.path.join(self.main_dir, self.registry_dir, file)
             for file in os.listdir(os.path.join(self.main_dir, self.registry_dir))
@@ -115,7 +115,7 @@ class Attendance():
         return identified_emp
     
     # # Function to verify the employee
-    # def verify_employee(self, uploaded_file_path):
+    def verify_employee(self, uploaded_file_path):
         identified_emp = None
         dissimilarity_index = 1
         
@@ -132,7 +132,7 @@ class Attendance():
                 result = DeepFace.verify(img1_path=file_path, 
                                          img2_path=uploaded_file_path, 
                                          model_name="Facenet512", 
-                                         detector_backend="retinaface", 
+                                         detector_backend="ssd", 
                                          distance_metric="euclidean_l2", 
                                          align=True, 
                                          enforce_detection=True)
